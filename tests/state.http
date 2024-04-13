@@ -1,0 +1,15 @@
+@hostname = 127.0.0.1
+@port = 8000
+@resource = state
+
+### GetAll
+GET http://{{hostname}}:{{port}}/api/{{resource}}
+
+### CreateState
+POST http://{{hostname}}:{{port}}/api/{{resource}}
+Content-Type: application/json
+
+{
+    "name": "Bahia",
+    "abbreviation": "GO"
+}
