@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import StateAPIView
+from .views import StateAPIView, StateByIdApiView
 
 urlpatterns = [
-    path('state', StateAPIView.as_view())
+    path('states', StateAPIView.as_view()),
+    path('state/<int:pk>', StateByIdApiView.as_view()),
 ]
