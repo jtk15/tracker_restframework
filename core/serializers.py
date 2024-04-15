@@ -20,4 +20,4 @@ class StateSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = State
-        fields = ['name', 'abbreviation']
+        fields = ['pk', 'name', 'abbreviation']

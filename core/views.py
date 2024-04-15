@@ -31,3 +31,11 @@ class StateAPIView(generics.ListCreateAPIView):
     queryset = State.objects.all()
     serializer_class = StateSerializer
     
+class StateByIdApiView(generics.RetrieveUpdateDestroyAPIView):
+    
+    queryset = State.objects.all()
+    serializer_class = StateSerializer
+
+
+
+    
