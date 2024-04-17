@@ -1,7 +1,7 @@
 from django.contrib.auth.models import Group, User
 from rest_framework import serializers
 
-from core.models import State
+from core.models import City, State
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -21,3 +21,10 @@ class StateSerializer(serializers.ModelSerializer):
     class Meta:
         model = State
         fields = ['pk', 'name', 'abbreviation']
+        
+
+class CitySerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = City
+        fields = ['pk', 'name', 'statefk']

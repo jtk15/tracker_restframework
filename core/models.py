@@ -10,4 +10,4 @@ class State(Base):
 
 
 class City(Base):
-    state_fk = models.ForeignKey(State, related_name="cities", on_delete=models.CASCADE)
+    statefk = models.ForeignKey(State, related_name="cities", on_delete=models.CASCADE)

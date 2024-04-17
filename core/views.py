@@ -4,8 +4,8 @@ from rest_framework.decorators import api_view
 from django.contrib.auth.models import Group, User
 from rest_framework import permissions, viewsets, generics
 
-from core.models import State
-from core.serializers import GroupSerializer, UserSerializer, StateSerializer
+from core.models import City, State
+from core.serializers import CitySerializer, GroupSerializer, UserSerializer, StateSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -35,6 +35,12 @@ class StateByIdApiView(generics.RetrieveUpdateDestroyAPIView):
     
     queryset = State.objects.all()
     serializer_class = StateSerializer
+
+
+class CityAPIView(generics.ListCreateAPIView):
+    
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
 
 
 
